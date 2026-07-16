@@ -17,7 +17,6 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model) {
-
         model.addAttribute(
                 "productCount",
                 productService.countProducts());
@@ -34,21 +33,37 @@ public class HomeController {
                 "supplierCount",
                 productService.countSuppliers());
 
+        model.addAttribute(
+                "activePage",
+                "home");
+
         return "index";
     }
 
     @GetMapping("/about")
-    public String about() {
+    public String about(Model model) {
+        model.addAttribute(
+                "activePage",
+                "about");
+
         return "about";
     }
 
     @GetMapping("/warehouse")
-    public String warehouse() {
+    public String warehouse(Model model) {
+        model.addAttribute(
+                "activePage",
+                "warehouse");
+
         return "warehouse";
     }
 
     @GetMapping("/roadmap")
-    public String roadmap() {
+    public String roadmap(Model model) {
+        model.addAttribute(
+                "activePage",
+                "roadmap");
+
         return "roadmap";
     }
 }

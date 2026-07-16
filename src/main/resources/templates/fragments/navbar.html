@@ -23,27 +23,27 @@
         <div id="mainNavbar" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" th:href="@{/}"> Home </a>
+              <a class="nav-link" th:href="@{/}" th:classappend="${activePage == 'home'} ? 'active' : ''"> Home </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" th:href="@{/products}"> Products </a>
+              <a class="nav-link" th:href="@{/products}" th:classappend="${activePage == 'products'} ? 'active' : ''"> Products </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" th:href="@{/products/new}"> Add Product </a>
+              <a class="nav-link" th:href="@{/products/new}" th:classappend="${activePage == 'addProduct'} ? 'active' : ''"> Add Product </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" th:href="@{/warehouse}"> Warehouse </a>
+              <a class="nav-link" th:href="@{/warehouse}" th:classappend="${activePage == 'warehouse'} ? 'active' : ''"> Warehouse </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" th:href="@{/about}"> About </a>
+              <a class="nav-link" th:href="@{/about}" th:classappend="${activePage == 'about'} ? 'active' : ''"> About </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" th:href="@{/roadmap}"> Roadmap </a>
+              <a class="nav-link" th:href="@{/roadmap}" th:classappend="${activePage == 'roadmap'} ? 'active' : ''"> Roadmap </a>
             </li>
           </ul>
         </div>
