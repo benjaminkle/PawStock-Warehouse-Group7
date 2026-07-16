@@ -64,31 +64,39 @@
 
         <div class="row g-4">
           <div class="col-sm-6 col-lg-3">
-            <div class="dashboard-card">
-              <p class="dashboard-number" th:text="${productCount}">0</p>
-              <p class="mb-0">Products</p>
-            </div>
+            <a th:href="@{/products}" class="text-decoration-none text-reset clickable-card-link">
+              <div class="dashboard-card">
+                <p class="dashboard-number" th:text="${productCount}">0</p>
+                <p class="mb-0">Products</p>
+              </div>
+            </a>
           </div>
 
           <div class="col-sm-6 col-lg-3">
-            <div class="dashboard-card">
-              <p class="dashboard-number" th:text="${brandCount}">0</p>
-              <p class="mb-0">Brands</p>
-            </div>
+            <a th:href="@{/products}" class="text-decoration-none text-reset clickable-card-link">
+              <div class="dashboard-card">
+                <p class="dashboard-number" th:text="${brandCount}">0</p>
+                <p class="mb-0">Brands</p>
+              </div>
+            </a>
           </div>
 
           <div class="col-sm-6 col-lg-3">
-            <div class="dashboard-card">
-              <p class="dashboard-number" th:text="${categoryCount}">0</p>
-              <p class="mb-0">Categories</p>
-            </div>
+            <a th:href="@{/products}" class="text-decoration-none text-reset clickable-card-link">
+              <div class="dashboard-card">
+                <p class="dashboard-number" th:text="${categoryCount}">0</p>
+                <p class="mb-0">Categories</p>
+              </div>
+            </a>
           </div>
 
           <div class="col-sm-6 col-lg-3">
-            <div class="dashboard-card">
-              <p class="dashboard-number" th:text="${supplierCount}">0</p>
-              <p class="mb-0">Suppliers</p>
-            </div>
+            <a th:href="@{/products}" class="text-decoration-none text-reset clickable-card-link">
+              <div class="dashboard-card">
+                <p class="dashboard-number" th:text="${supplierCount}">0</p>
+                <p class="mb-0">Suppliers</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>

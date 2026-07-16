@@ -44,6 +44,22 @@ body {
   height: 100%;
 }
 
+.dashboard-card,
+.content-card {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clickable-card-link {
+  display: block;
+}
+
+.clickable-card-link:hover .dashboard-card,
+.clickable-card-link:hover .content-card {
+  transform: scale(1.02);
+  border-color: var(--paw-primary);
+  box-shadow: 0 0.9rem 2rem rgba(25, 55, 45, 0.12);
+}
+
 .dashboard-number {
   color: var(--paw-primary);
   font-size: 2.25rem;
@@ -75,6 +91,19 @@ body {
 .active > .page-link {
   background-color: var(--paw-primary);
   border-color: var(--paw-primary);
+}
+
+.sort-active {
+  background-color: var(--paw-primary) !important;
+  color: white !important;
+}
+
+.sort-active.asc::after {
+  content: " ▲";
+}
+
+.sort-active.desc::after {
+  content: " ▼";
 }
 
 .error-card {

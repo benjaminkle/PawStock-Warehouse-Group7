@@ -70,6 +70,7 @@ public class ProductController {
         model.addAttribute("selectedPetType", petType);
         model.addAttribute("sortField", sortField);
         model.addAttribute("sortDirection", sortDirection);
+        model.addAttribute("activePage", "products");
 
         return "products/list";
     }
@@ -78,6 +79,8 @@ public class ProductController {
     public String showCreateForm(Model model) {
         model.addAttribute("productForm", new ProductForm());
         model.addAttribute("isEdit", false);
+        model.addAttribute("activePage", "addProduct");
+
         addFormOptions(model);
 
         return "products/form";
@@ -92,7 +95,10 @@ public class ProductController {
 
         if (bindingResult.hasErrors()) {
             model.addAttribute("isEdit", false);
+            model.addAttribute("activePage", "addProduct");
+
             addFormOptions(model);
+
             return "products/form";
         }
 
